@@ -1,24 +1,57 @@
 
-> Open this page at [https://reda-lmassak.github.io/robotisobot/](https://reda-lmassak.github.io/robotisobot/)
+# Micro:bit Isobot Line‑Following Robot
 
-## Use as Extension
+This repository contains the source code and documentation for a line‑following **Isobot** robot controlled by a BBC micro:bit, developed as part of a university SULAM (Service Learning Malaysia – University for Society) outreach initiative with a local primary school.
 
-This repository can be added as an **extension** in MakeCode.
+## Project Overview
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/reda-lmassak/robotisobot** and import
+- Team‑based educational robotics project designed to introduce primary school students to fundamental concepts in electronics, programming, and automation.  
+- Utilises a Micro:bit microcontroller, DC motors, an Isobot chassis, and infrared line‑tracking sensors to implement autonomous path‑following behaviour.  
+- Conducted in collaboration with university makerspace staff and a partner primary school as part of a structured community engagement programme.
 
-## Edit this project
+## Role and Responsibilities
 
-To edit this repository in MakeCode.
+- Led the **hardware implementation and deployment** of multiple Isobot units, integrating Micro:bit boards, motor drivers, DC motors, IR sensors, and power modules into complete robotic platforms.  
+- Performed **hardware diagnostics and system verification**, identifying and resolving issues related to power fluctuations, loose electrical connections, and sensor alignment to ensure reliable operation during workshops.  
+- Managed **logistics and inventory** for all robotic kits, including tracking boards, batteries, chassis components, and spare parts to guarantee full readiness and availability for each student group.  
+- Supported **knowledge transfer** by explaining hardware architecture, safe handling procedures, and basic troubleshooting steps to non‑technical participants and assisting facilitators during live demonstrations.
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/reda-lmassak/robotisobot** and click import
+## Technologies and Skills
 
-#### Metadata (used for search, rendering)
+- Micro:bit microcontrollers and MakeCode‑based embedded programming.  
+- Circuit assembly, wiring practices, and hardware troubleshooting for low‑voltage systems.  
+- DC motor and motor‑driver integration, including basic PWM‑based speed and direction control.  
+- Inventory coordination and field deployment of educational hardware for classroom environments.  
+- Application of basic electrical safety principles in a school setting.
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## Repository Contents
+
+- MakeCode project files implementing line‑following logic using five IR sensors (digital inputs) and function‑based motor control (e.g., forward, turning, reverse).  
+- Configuration notes for sensor placement, threshold tuning, and motor speed adjustment to improve tracking stability on different line‑track layouts.  
+- High‑level documentation to enable educators and students to replicate, adapt, and extend the Isobot line‑following platform for STEM activities.
+
+## Getting Started
+
+1. **Prepare the hardware**  
+   - You will need a Micro:bit board, USB cable, Isobot chassis with motor driver, IR line‑tracking sensors, and a battery pack suitable for your kit. 
+   - Assemble the chassis, mount the motors and motor driver, install the Micro:bit, and position the IR sensors at the front underside of the robot facing the track. 
+
+2. **Open the MakeCode editor**  
+   - Go to the official MakeCode for Micro:bit editor: https://makecode.microbit.org. 
+   - Optionally, review the “Getting started with MakeCode” guide for a quick tour of the interface: https://microbit.org/get-started/user-guide/microsoft-makecode. 
+
+3. **Import this project**  
+   - In MakeCode, click **Home → Import → Import URL**. 
+   - Paste this repository’s project URL and select **Import** to load the blocks.  
+
+4. **Configure and test in the simulator**  
+   - Check the sensor pin assignments (e.g., P12–P16) and motor control pins match your expansion board. 
+   - Use the built‑in simulator to verify that the robot logic reacts correctly when sensor values change before flashing the code to the real device. 
+
+5. **Download to the Micro:bit**  
+   - Connect the Micro:bit to your computer using USB and click **Download** in MakeCode to generate the `.hex` file.  
+   - Copy the downloaded file to the MICROBIT drive; the board will reset automatically when flashing completes. 
+
+6. **Run on a line‑following track**  
+   - Place the robot on a high‑contrast black line on a light background (or vice versa) and turn on the power. 
+   - If the robot drifts off the line, adjust sensor thresholds or motor speeds in the MakeCode project and re‑flash until tracking is stable. 
